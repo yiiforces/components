@@ -71,3 +71,7 @@ $db->createCommand()->insert('test', [
 
 // get list
 var_dump($db->createCommand('select * from test')->queryAll());
+```
+Docs:
+https://www.yiiframework.com/doc/guide/2.0/en/db-dao
+
