@@ -66,7 +66,7 @@ $db->createCommand('insert into test (name) values (:name)', [
 ])->execute();
 
 $db->createCommand()->insert('test', [
-    'name' => 'Sam',
+	'name' => 'Sam',
 ])->execute();
 
 // get list
