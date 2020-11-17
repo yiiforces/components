@@ -3,13 +3,11 @@ example of usage
 ```php
 <?php
 // define path structs
-define('BASE_PATH'    , dirname(__FILE__));
+define('BASE_PATH'    , sys_get_temp_dir() .'/'. md5(__DIR__) ); // unique path temporal
 define('RUNTIME_PATH' , BASE_PATH   . '/runtime');
 define('CACHE_PATH'   , BASE_PATH   . '/runtime/cache');
 define('LOG_PATH'     , BASE_PATH   . '/runtime/logs');
-define('PARAMS_PATH'  , BASE_PATH   . '/config/params');
-define('DATA_PATH'    , BASE_PATH   . '/data');
-define('ALIASES_FILE' , PARAMS_PATH . '/aliases.json');
+define('ALIASES_FILE' , BASE_PATH   . '/runtime/aliases.json');
 
 if(!is_dir(RUNTIME_PATH))
 {
