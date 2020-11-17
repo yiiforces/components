@@ -3,7 +3,7 @@ example of usage
 ```php
 <?php
 // define path structs
-define('BASE_PATH'    , sys_get_temp_dir() .'/'. md5(__DIR__) ); // unique path temporal
+define('BASE_PATH'    , sys_get_temp_dir() .'/'. md5(__DIR__) ); // unique  temporal path
 define('RUNTIME_PATH' , BASE_PATH   . '/runtime');
 define('CACHE_PATH'   , BASE_PATH   . '/runtime/cache');
 define('LOG_PATH'     , BASE_PATH   . '/runtime/logs');
@@ -41,7 +41,7 @@ use db\Connection;
 use db\ColumnSchemaBuilder;
 use db\pgsql\Schema;
 
-// open connection
+// create new connection
 $db = new Connection([
 	'dsn'         => 'pgsql:host=localhost;dbname=test',
 	'username'    => 'postgres',
