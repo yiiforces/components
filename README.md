@@ -21,9 +21,6 @@ if(!is_dir(LOG_PATH))
 if(!is_dir(CACHE_PATH))
 	@mkdir(CACHE_PATH, 0777, true);
 
-if(!is_dir(PARAMS_PATH))
-	@mkdir(PARAMS_PATH, 0777, true);
-
 if(!file_exists(ALIASES_FILE))
 	file_put_contents(ALIASES_FILE, '{}');
 
