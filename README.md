@@ -24,12 +24,6 @@ if(!is_dir(CACHE_PATH))
 if(!is_dir(PARAMS_PATH))
 	@mkdir(PARAMS_PATH, 0777, true);
 
-if(!is_dir(DATA_PATH))
-{
-	@mkdir(DATA_PATH, 0777, true);
-	@touch(DATA_PATH . '/.gitkeep');
-}
-
 if(!file_exists(ALIASES_FILE))
 	file_put_contents(ALIASES_FILE, '{}');
 
